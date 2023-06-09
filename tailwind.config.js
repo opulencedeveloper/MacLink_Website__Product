@@ -18,7 +18,14 @@ module.exports = {
       colors: {
         primary: "#F57E27",
         primaryshade: "#FFFCFA",
+        primaryshade1: "#FFF6F0",
+        primaryshade2: "#FFF9F5",
         secondary: "#737373",
+        secondaryshade: "#EBEBEB"
+      },
+      boxShadow: {
+        '3xl': '0px 0px 24px rgba(0, 0, 0, 0.04)', 
+        "4xl": '0px 0px 60px rgba(0, 0, 0, 0.02);'
       },
     },
   },

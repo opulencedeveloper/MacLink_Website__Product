@@ -1,0 +1,14 @@
+
+.custom_list {
+    list-style-type: none;
+  }
+  
+  .custom_list li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #F57E27;
+    margin-right: 0.5rem;
+  }
