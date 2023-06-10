@@ -7,7 +7,7 @@ const heroContent = [
   },
   {
     text: "Online",
-    postion: " bottom-52 left-0 md:left-20 lg:left-5 2xl:left-14",
+    postion: " bottom-44 left-0 md:left-20 md:bottom-52 lg:left-5 2xl:left-14",
   },
   {
     text: "Uinique",
@@ -25,28 +25,31 @@ const heroContent = [
 
 const bussinessLogos = ["1", "2", "3", "4", "5"];
 
-const SectionOne = () => {
+const SectionOne = (props) => {
   return (
     <>
       {" "}
-      <div className="w-full flex flex-col bg-primaryshade pt-20 justify-between px-5 md:px-10 lg:flex-row">
-        <div className="space-y-6 pt-16 w-full lg:w-1/2">
-          <h2 className="text-5xl font-bold leading-normal lg:text-6xl">
+      <div className="w-full flex flex-col bg-primaryshade pb-7 pt-8 justify-between px-5 md:px-10 md:pt-20 lg:flex-row">
+      <div className="fixed top-0 right-5 text-xs">
+        Site developed by opulencedeveloper
+      </div>
+        <div data-aos="fade-up" className="space-y-6 pt-auto w-full lg:w-1/2 lg:pt-16">
+          <h2 className="text-4xl font-bold leading-normal lg:text-6xl">
             Create your <span className="text-primary">online Academy</span> in
             minutes
           </h2>
-          <p className="text-secondary text-lg">
+          <p className="text-secondary text-base md:text-lg">
             Share, sell, engage, support and impact your audience/students using
             several Apps with MacLink
           </p>
-          <button className="text-lg font-semibold bg-primary px-6 py-4 text-white">
+          <button className="text-base font-semibold bg-primary px-6 py-4 text-white md:text-lg">
             Get Started for Free
           </button>
-          <p className="text-secondary font-light">
+          <p className="text-secondary font-light text-sm md:text-base">
             No code required, no credit card, no technical skills needed
           </p>
         </div>
-        <div className="relative flex justify-center w-full lg:w-1/2">
+        <div data-aos="fade-up" className="relative flex justify-center w-full lg:w-1/2">
           <Image
             src="/images/hero-image.svg"
             alt="hero image"
@@ -66,8 +69,8 @@ const SectionOne = () => {
           ))}
         </div>
       </div>
-      <div className="px-5 pt-7 space-y-5 md:px-10">
-        <div className="text-xl">Trusted by top business</div>
+      <div data-aos="fade-up" className="px-5 pt-8 space-y-5 md:px-10">
+        <div className="text-lg md:text-xl">Trusted by top business</div>
         <div className="flex flex-wrap justify-evenly">
           {bussinessLogos.map((logoName, index) => (
             <Image
@@ -76,7 +79,7 @@ const SectionOne = () => {
               width={200}
               height={64}
               alt={logoName}
-              className="w-auto h-auto mb-7"
+              className="w-1/2 h-1/2 md:w-auto md:h-auto mb-8"
             />
           ))}
         </div>

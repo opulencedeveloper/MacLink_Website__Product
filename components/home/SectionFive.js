@@ -37,44 +37,56 @@ const SectionFive = () => {
   };
 
   return (
-    <div className="bg-primaryshade2 flex flex-col pl-5 py-10 md:pl-10 lg:flex-row mb-40">
-      <div className="w-full space-y-5 lg:w-1/2">
-        <div className="text-2xl font-bold">What our customers are saying</div>
-        <p className="text-secondary font-light">
+    <div className="bg-primaryshade2 border-t-4 border-primary flex flex-col pl-5 py-12 mb-12 md:pl-10 md:mb-40 lg:flex-row ">
+      <div
+        data-aos="fade-up"
+        className="w-full space-y-5 text-center lg:w-1/2 lg:text:start"
+      >
+        <div className="text-xl font-bold md:text-3xl">
+          What our customers are saying
+        </div>
+        <p className="text-secondary pb-6 font-light text-sm md:text-base">
           Customers are happy using MacLink
         </p>
       </div>
-      <div className="relative w-full flex text-white overflow-x-hidden lg:w-1/2">
-       {currentIndex !== 0 && <Image
-          src="/images/icon/rightarrow-icon.svg"
-          loading="eager"
-          priority
-          alt="arrow icon"
-          height={48}
-          width={48}
-          onClick={prevSlide}
-          className="h-auto w-auto z-20 transform rotate-180 absolute -translate-y-1/2 top-2/3 right-10"
-        />}
-        {currentIndex !== 2 && <Image
-          src="/images/icon/rightarrow-icon.svg"
-          alt="arrow icon"
-          loading="eager"
-          priority
-          height={48}
-          width={48}
-          onClick={nextSlide}
-          className="h-auto w-auto z-20 absolute -translate-y-1/2 top-1/2 right-10"
-        /> }
-        {/* <div className="absolute z-10 right-0 h-full w-[45%] bg-[#FFF9F5] bg-opacity-70"></div> */}
+      <div
+        data-aos="fade-up"
+        className="relative w-full flex text-white overflow-x-hidden lg:w-1/2"
+      >
+        {currentIndex !== 0 && (
+          <Image
+            src="/images/icon/rightarrow-icon.svg"
+            loading="eager"
+            priority
+            alt="arrow icon"
+            height={48}
+            width={48}
+            onClick={prevSlide}
+            className="h-auto w-auto z-20 transform rotate-180 absolute -translate-y-1/2 top-2/3 right-10"
+          />
+        )}
+        {currentIndex !== 2 && (
+          <Image
+            src="/images/icon/rightarrow-icon.svg"
+            alt="arrow icon"
+            loading="eager"
+            priority
+            height={48}
+            width={48}
+            onClick={nextSlide}
+            className="h-auto w-auto z-20 absolute -translate-y-1/2 top-1/2 right-10"
+          />
+        )}
         {customerComments.map((contents, index) => {
           const opacity = index !== currentIndex ? "bg-opacity-20" : "";
           return (
             <div
+              key={index}
               id={contents.id}
               style={{
                 transform: `translateX(-${currentPostion}%)`,
               }}
-              className={`${opacity} mr-8 bg-primary rounded-xl px-8   transition-transform duration-500 md:p-14`}
+              className={`${opacity} mr-8 bg-primary rounded-xl p-8   transition-transform duration-500 md:p-14`}
             >
               <Image
                 src="/images/icon/quotes.svg"
@@ -86,7 +98,9 @@ const SectionFive = () => {
               <p className="text-base w-60 font-semibold pb-3 md:w-72 md:text-lg">
                 {contents.comment}
               </p>
-              <div className="font-semibold text-base md:text-lg">Amobi Victor Chukwuka</div>
+              <div className="font-semibold text-base md:text-lg">
+                Amobi Victor Chukwuka
+              </div>
               <div className="font-light">UNN Int'l school PH.</div>
             </div>
           );

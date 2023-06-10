@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 const sectionThreeContents = [
   {
     icon: "camera",
@@ -21,8 +22,10 @@ const sectionThreeContents = [
   },
 ];
 const SectionThree = () => {
+  
+
   return (
-    <div className="px-5 space-y-10 pt-16 mb-20 md:px-10">
+    <div data-aos="fade-up" id="my-component" className={`px-5 space-y-10 pt-24 mb-20 md:px-10`}>
       <div className="text-3xl font-bold text-center">
         Impact Better and grow bigger
       </div>

@@ -1,71 +1,89 @@
 import Image from "next/image";
-
+const icons = [
+  "facebook-icon",
+  "linkedin-icon",
+  "youtube-icon",
+  "twitter-icon",
+];
 const Footer = () => {
   return (
-    <div className="bg-custom9 flex justify-between py-10 px-5 font-montserrat text-custom1 md:px-40">
-      <div className="flex flex-col">
-        <div className="mb-7"><Image
-          src="/images/logo/logo-white.svg"
-          alt="call a doctor logo"
-          className="h-75.51 w-148"
-          width={148}
-          height={75.51}
-        /></div>
-        <p className="text-3xl font-medium pb-4">Visit us</p>
-        <p className="text-sm font-medium">Headquaters</p>
-        <address className="text-base not-italic">
-          No.12 Kilimanja District Lagos, Nigeria
-        </address>
-        <address className="not-italic mb-4">Nigeria</address>
-        <address className="font-medium ">Branches</address>
-        <address>
-          No.12 Kilimanja District Lagos,
-        </address>
-        <address>Nigeria</address>
-        <address className="not-italic">
-          No.35 Lokogoma estate Lokogoma Abuja,
-        </address>
-        <address className="not-italic">Nigeria</address>
-      </div>
-      <div className="flex flex-col justify-between">
-        <div className="flex space-x-8">
-          <div className="text-base space-y-5">
-            <p className="text-lg font-medium">Home</p>
-            <p>What do we do</p>
-            <p>List of specialization</p>
+    <footer className="px-5 text-white font-light pb-10 text-base md:text-xl  md:px-10">
+      <div className="flex justify-between flex-col space-y-8 lg:flex-row md:space-y-0">
+        <div className="space-y-5 mb-5">
+          {" "}
+          <div className="space-y-3 pr-5">
+            <div className="flex items-center space-x-1 text-primary">
+              <div className="text-4xl font-semibold">M</div>
+              <div>MacLink</div>
+            </div>
+            <div className="max-w-xl mb-10 text-secondary">
+              MacLink is a cloud-based platform for educators and creators to
+              build end-to-end edtech solutions in few minutes and zero codes.
+            </div>
           </div>
-          <div className="text-base space-y-5">
-            <p className="text-lg font-medium">About us</p>
-            <p>Our team</p>
-            <p>Core values</p>
+          <address className=" text-secondary not-italic">
+            <div className="font-semibold mb-2">Nigeria Office</div>
+            <div>
+            38 Opebi Road, Ikeja, Lagos State, Nigeria.
+
+            </div>
+            <div>+2345678912</div>
+          </address>
+
+          <address className="text-secondary not-italic">
+            <div className="font-semibold mb-2">United Kingdom Office</div>
+            <div>
+            Longside Lane, Longside House, Bradford, United kingdom
+             
+            </div>
+            <div>+12345678912</div>
+          </address>
+        </div>
+<div className="flex justify-between">
+        <div className="font-light text-secondary">
+          <div className="space-y-4 mb-16">
+            <div className="font-semibold text-primary">Company</div>
+            <div>About us</div>
+            <div>Features</div>
+            <div>Pricing</div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="font-semibold text-primary">Legal</div>
+            <div>Privacy Policy</div>
+            <div>Intellectual Property</div>
+            <div>Term of use</div>
           </div>
         </div>
-        <div className="flex space-x-7 items-center -ml-10">
-          <p className="text-sm 2xl:text-lg">Reach us</p>
-          <Image
-            src="/images/icon/twitter.svg"
-            alt="twitter-icon"
-            className="h-5 w-5 2xl:h-11 w-11"
-            width={42}
-            height={42}
-          />
-          <Image
-            src="/images/icon/facebook.svg"
-            alt="facebook-icon"
-            className="h-5 w-5 2xl:h-11 w-11"
-            width={42}
-            height={42}
-          />
-          <Image
-            src="/images/icon/instagram.svg"
-            alt="instagram-icon"
-            className="h-5 w-5 2xl:h-11 w-11"
-            width={42}
-            height={42}
-          />
+        <div className="space-y-4 font-light text-secondary">
+          <div className="font-semibold text-primary">General</div>
+          <div>Sign up</div>
+          <div>Create a center</div>
+          <div>Developer's Tools</div>
+          <div>Market place</div>
+          <div>Blog</div>
+        </div> </div>
+        <div className="flex flex-col font-semibold text-primary items-start space-y-4 md:items-end">
+          <div>Follow us on Social media</div>
+          <div className="flex space-x-8">
+            {icons.map((icon, index) => (
+              <Image
+                key={index}
+                className="w-auto h-auto"
+                alt={icon}
+                height={30}
+                width={30}
+                src={`images/icon/${icon}.svg`}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <div className="text-secondary border-t border-gray-500 mt-20 text-sm font-normal text-lg text-center pt-5">
+        Property of <span className="font-semibold">opulencedeveloper.com</span>{" "}
+        2023, All Rights Reserved
+      </div>
+    </footer>
   );
 };
 

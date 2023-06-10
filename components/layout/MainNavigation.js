@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// import Portal from "../UI/Portal";
-// import MobileNavigation from "./MobileNavigation";
-// import handleWhatsAppClick from "@/helpers/whatsapp";
+import Portal from "../UI/Portal";
+import MobileNavigation from "./MobileNavigation";
+import handleWhatsAppClick from "@/helpers/whatsapp";
 
 const linkContent = [
   { title: "App", link: "/" },
@@ -37,6 +37,15 @@ const MainNavigation = () => {
 
   return (
     <nav className="w-full flex items-center bg-primaryshade justify-between pt-7 px-5 md:px-10">
+      <Portal>
+        <div
+          className={`fixed inset-y-0 -left-64 z-50 shadow-lg lg:hidden transform  ${
+            isOpen ? "translate-x-full" : "translate-x-0"
+          } transition-transform duration-300 ease-in-out`}
+        >
+          <MobileNavigation />
+        </div>
+      </Portal>
       <div className="flex items-center space-x-1 text-primary">
         <div className="text-4xl font-semibold">M</div>
         <div>MacLink</div>
@@ -47,26 +56,48 @@ const MainNavigation = () => {
           {" "}
           {linkContent.map((content, index) =>
             index === 0 || index === 1 ? (
-              <select className="pr-1">
+              <select key={index} className="pr-1">
                 <option>{content.title}</option>
               </select>
             ) : (
-              <Link key={index} className="" href={content.link}>
+              <Link
+                onClick={handleWhatsAppClick}
+                key={index}
+                className=""
+                href={content.link}
+              >
                 {content.title}
               </Link>
             )
           )}{" "}
         </div>{" "}
       </div>
-      <div className="flex font-semibold text-lg">
+      <div className="flex font-semibold text-lg hidden lg:flex">
         {" "}
-        <Link href={""} className="px-11 py-4 text-primary">
+        <Link
+          onClick={handleWhatsAppClick}
+          href={""}
+          className="px-11 py-4 text-primary"
+        >
           Login
         </Link>
-        <Link href={""} className="bg-primary text-white px-6 py-4">
+        <Link
+          onClick={handleWhatsAppClick}
+          href={""}
+          className="bg-primary text-white px-6 py-4"
+        >
           Create Account
         </Link>
       </div>
+      <button
+        className={`${navAnimationClass} block hamburger lg:hidden focus:outline-none`}
+        type="button"
+        onClick={toggleDrawer}
+      >
+        <span className="hamburger-top"></span>
+        <span className="hamburger-middle"></span>
+        <span className="hamburger-bottom"></span>
+      </button>
     </nav>
   );
 };
