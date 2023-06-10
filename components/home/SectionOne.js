@@ -15,7 +15,7 @@ const heroContent = [
   },
   {
     text: "Reliable",
-    postion: "bottom-20 right-8 md:right-56 lg:right-24 2xl:right-48",
+    postion: "bottom-20 right-8 md:right-52 lg:right-24 2xl:right-48",
   },
   {
     text: "Learning",
@@ -62,7 +62,7 @@ const SectionOne = (props) => {
           {heroContent.map((content, index) => (
             <button
               key={index}
-              className={`absolute ${content.postion} rounded-3xl text-primary text-base border border-primary px-5 py-2 md:text-xl`}
+              className={`absolute ${content.postion} rounded-3xl text-primary text-xs border border-primary px-5 py-2 md:text-xl`}
             >
               {content.text}
             </button>
