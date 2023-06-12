@@ -57,11 +57,11 @@ const SectionFour = () => {
             );
           })}
         </div>
-        <div className="my-20 text-center">
+        <div  data-aos="fade-up" className="my-20 text-center">
           <div className="text-2xl font-bold mb-9 md:text-3xl">
             Not too sure how MacLink work?
           </div>
-          <div data-aos="fade-up" className="flex justify-evenly space-x-0 flex-wrap xl:space-x-3">
+          <div className="flex justify-evenly space-x-0 flex-wrap xl:space-x-3">
             {youtubeContent.map((content, index) => (
               <div key={index} className="space-y-5 mb-8">
                 <Image

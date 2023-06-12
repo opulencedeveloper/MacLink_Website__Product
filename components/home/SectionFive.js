@@ -37,9 +37,8 @@ const SectionFive = () => {
   };
 
   return (
-    <div className="bg-primaryshade2 border-t-4 border-primary flex flex-col pl-5 py-12 mb-12 md:pl-10 md:mb-40 lg:flex-row ">
+    <div data-aos="fade-up" className="bg-primaryshade2 border-t-4 border-primary flex flex-col pl-5 py-12 mb-12 md:pl-10 md:mb-40 lg:flex-row ">
       <div
-        data-aos="fade-up"
         className="w-full space-y-5 text-center lg:w-1/2 lg:text:start"
       >
         <div className="text-xl font-bold md:text-3xl">
@@ -50,7 +49,6 @@ const SectionFive = () => {
         </p>
       </div>
       <div
-        data-aos="fade-up"
         className="relative w-full flex text-white overflow-x-hidden lg:w-1/2"
       >
         {currentIndex !== 0 && (
