@@ -41,6 +41,8 @@ const SectionTwo = () => {
                 className="w-[169px] h-[179px] md:h-auto md:w-auto"
                 height={550}
                 width={519}
+                placeholder="blur"
+                blurDataURL="/images/image1.svg"
                 alt="image of center"
               />
             </div>
