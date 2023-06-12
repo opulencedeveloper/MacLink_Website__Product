@@ -90,6 +90,7 @@ const SectionFive = () => {
             >
               <Image
                 src="/images/icon/quotes.svg"
+                loading="eager"
                 alt="quotes"
                 height={83}
                 width={37}

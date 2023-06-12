@@ -48,6 +48,7 @@ const SectionFour = () => {
                 <Image
                   src={`/images/${content.image}-image.png`}
                   alt="laptop-image"
+                  loading="eager"
                   className="h-auto w-auto"
                   height={459}
                   width={485}
@@ -66,6 +67,7 @@ const SectionFour = () => {
                 <Image
                   key={index}
                   src="/images/youtube-image.svg"
+                  loading="eager"
                   alt="youtube"
                   className="h-auto w-auto"
                   height={459}

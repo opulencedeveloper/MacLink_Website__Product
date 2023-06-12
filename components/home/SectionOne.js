@@ -77,6 +77,7 @@ const SectionOne = (props) => {
               key={index}
               src={`/images/logo/business-logo${logoName}.svg`}
               width={200}
+              loading="eager"
               height={64}
               alt={logoName}
               className="w-1/2 h-1/2 md:w-auto md:h-auto mb-8"

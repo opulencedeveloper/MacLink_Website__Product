@@ -37,6 +37,7 @@ const SectionTwo = () => {
             <div className="flex justify-center">
               <Image
                 src="/images/image1.svg"
+                loading="eager"
                 className="w-[169px] h-[179px] md:h-auto md:w-auto"
                 height={550}
                 width={519}

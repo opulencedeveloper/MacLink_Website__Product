@@ -40,6 +40,7 @@ const SectionThree = () => {
               <Image
                 src={`/images/icon/${content.icon}-icon.svg`}
                 alt="camera-icon"
+                loading="eager"
                 height={27.5}
                 width={35}
                 className="w-4 h-3 md:h-7 md:w-9"

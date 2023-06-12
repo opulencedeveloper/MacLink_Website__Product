@@ -70,6 +70,7 @@ const Footer = () => {
               <Image
                 key={index}
                 className="w-auto h-auto"
+                loading="eager"
                 alt={icon}
                 height={30}
                 width={30}
