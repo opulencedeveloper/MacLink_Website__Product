@@ -1,5 +1,4 @@
 import Image from "next/image";
-import image from "../../public/images/hero-image.svg"
 
 const heroContent = [
   {
@@ -34,7 +33,7 @@ const SectionOne = (props) => {
       <div className="fixed top-0 right-5 text-xs">
         Site developed by opulencedeveloper
       </div>
-        <div className="space-y-6 pt-auto w-full lg:w-1/2 lg:pt-16">
+        <div data-aos="fade-up" className="space-y-6 pt-auto w-full lg:w-1/2 lg:pt-16">
           <h2 className="text-4xl font-bold leading-normal lg:text-6xl">
             Create your <span className="text-primary">online Academy</span> in
             minutes
@@ -50,12 +49,12 @@ const SectionOne = (props) => {
             No code required, no credit card, no technical skills needed
           </p>
         </div>
-        <div className="relative flex justify-center w-full lg:w-1/2">
+        <div data-aos="fade-up" className="relative flex justify-center w-full lg:w-1/2">
           <Image
             src="/images/hero-image.svg"
             alt="hero image"
-            placeholder="blur"
-            blurDataURL={`${image}?blur=200`}
+            priority
+            loading="eager"
             width={456}
             height={456}
             className="h-auto w-auto"
@@ -78,7 +77,6 @@ const SectionOne = (props) => {
               key={index}
               src={`/images/logo/business-logo${logoName}.svg`}
               width={200}
-              loading="eager"
               height={64}
               alt={logoName}
               className="w-1/2 h-1/2 md:w-auto md:h-auto mb-8"
