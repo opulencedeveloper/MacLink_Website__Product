@@ -56,7 +56,7 @@ const MainNavigation = () => {
           {" "}
           {linkContent.map((content, index) =>
             index === 0 || index === 1 ? (
-              <select key={index} className="pr-1">
+              <select key={index} className="pr-1 bg-white">
                 <option>{content.title}</option>
               </select>
             ) : (
